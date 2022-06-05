@@ -9,20 +9,30 @@
     </head>
 
     <body>
-        <div class="wrapper">
+        <div class="wrap">
             <header>
                 <h1>
                     <a href="/">Tech Blog</a>
                 </h1>
                 <nav>
+                    {{#if loggedIn}}
+                    <a href="/dashboard">Dashboard</a>
+                    <button id="logout" class="btn-logout">Logout</button>
+                    {{else}}
+                    <a href="/login">Login</a>
+                    {{/if}}
                 </nav>
             </header>
             <main>
                 {{{body}}}
             </main>
             <footer>
-                Thanks for visiting!
+                Thanks for Stopping by! Come Again!
             </footer>
         </div>
+
+        {{#if loggedIn}}
+        <script src="/javascript/logout.js"></script>
+        {{/if}}
     </body>
 </html>
