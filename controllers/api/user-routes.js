@@ -114,8 +114,8 @@ router.put('/:id', (req, res) => {
         }
     })
     .then(dbUserData => {
-        if (!dbUserData[0]) {
-            res.status(400).json({message: 'There is no user with this id'});
+        if (!dbUserData) {
+            res.status(404).json({message: 'There is no user with this id'});
             return;
         }
         res.json(dbUserData);

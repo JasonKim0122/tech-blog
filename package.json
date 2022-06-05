@@ -1,4 +1,10 @@
 {
+  "name": "the-tech0-blog",
+  "main": "server.js",
+  "scripts": {
+    "seeds": "node seeds/index.js"
+  },
+  
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",

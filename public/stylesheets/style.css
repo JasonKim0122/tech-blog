@@ -3,6 +3,7 @@
 }
 
 body, html {
+    background-color: rgb(142, 163, 226);
     height: 100%;
     margin: 0;
     padding: 0;
@@ -46,8 +47,12 @@ textarea:focus, input:focus {
     border: 2px solid rgb(52, 50, 50);
 }
 
+p {
+    color: black;
+}
+
 textarea {
-    min-width: 35%;
+    min-width: 75%;
     min-height: 100%;
 }
 
@@ -75,7 +80,7 @@ form label {
 
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0 2%;
     border-bottom: 2px solid black;
@@ -86,7 +91,10 @@ header h1 {
 }
 
 main {
-    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .btn-logout {
@@ -125,20 +133,47 @@ main {
     color: black;
 }
 
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 400px;
+    height: 150px;
+}
+
 .edit-post-link {
     display: block;
     margin: -1% 0 3% 0;
 }
 
+.comments {
+    border: 2px solid black;
+    width: 40%;
+}
+
 .comment {
+    color: black;
     padding: 2%;
     margin-bottom: 2% ;
+    border-bottom: 2px solid black;
 }
 
 .comment .meta {
     font-size: 85%;
     margin-bottom: 1%;
     opacity: 1;
+}
+
+.meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0 5% 60%;
+    width: 100%;
 }
 
 .comment-form {
@@ -155,5 +190,6 @@ footer {
     padding: 2%;
     font-size: 100%;
     border-top: 2px solid black;
+    color: black;
 }
 
